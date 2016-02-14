@@ -2,7 +2,7 @@ FROM resin/rpi-raspbian:jessie
 MAINTAINER Bowen Feng <bowenfeng.dev@gmail.com>
 
 RUN apt-get update && apt-get upgrade \
-    && apt-get install mongodb && makedir /data
+    && apt-get install mongodb && mkdir /data
 
 VOLUME ["/data"]
 EXPOSE 27017
